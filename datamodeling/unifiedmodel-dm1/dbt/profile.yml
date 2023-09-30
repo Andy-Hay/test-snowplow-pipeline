@@ -1,0 +1,14 @@
+unifiedmodel-dm1:
+  outputs:
+    prod:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_DATAMODELING_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_DATAMODELING_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_DATAMODELING_PASSWORD') }}"
+      role: "{{ env_var('SNOWFLAKE_DATAMODELING_ROLE') }}"
+      database: "{{ env_var('SNOWFLAKE_DATAMODELING_DATABASE') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_DATAMODELING_WAREHOUSE') }}"
+      schema: "{{ env_var('SNOWFLAKE_DATAMODELING_SCHEMA') }}"
+      threads: "{{ env_var('SNOWFLAKE_DATAMODELING_THREADS') }}"
+      client_session_keep_alive: true
+  target: prod
