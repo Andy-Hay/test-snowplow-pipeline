@@ -12,4 +12,5 @@ web:
       # threads: {{env_var('DATAMODELING_THREADS')}}
       threads: 1
       client_session_keep_alive: true
+      debug: true
   target: prod
