@@ -90,13 +90,7 @@ models:
         +schema: "scratch"
         +tags: "scratch"
         snowflake:
-          enabled: "{{ target.type == 'snowflake' | as_bool() }}"
-        # bigquery:
-        #   enabled: "{{ target.type == 'bigquery' | as_bool() }}"
-        # databricks:
-        #   enabled: "{{ target.type in ['databricks', 'spark'] | as_bool() }}"
-        # default:
-        #   enabled: "{{ target.type in ['redshift', 'postgres'] | as_bool() }}"
+          enabled: true
     optional_modules:
       consent:
         enabled: false
@@ -107,28 +101,16 @@ models:
       scratch:
         +schema: "scratch"
         +tags: "scratch"
-        # bigquery:
-        #   enabled: "{{ target.type == 'bigquery' | as_bool() }}"
-        # databricks:
-        #   enabled: "{{ target.type in ['databricks', 'spark'] | as_bool() }}"
-        # default:
-        #   enabled: "{{ target.type in ['redshift', 'postgres'] | as_bool() }}"
         snowflake:
-          enabled: "{{ target.type == 'snowflake' | as_bool() }}"
+          enabled: true
     sessions:
       +schema: "derived"
       +tags: "snowplow_web_incremental"
       scratch:
         +schema: "scratch"
         +tags: "scratch"
-        # bigquery:
-        #   enabled: "{{ target.type == 'bigquery' | as_bool() }}"
-        # databricks:
-        #   enabled: "{{ target.type in ['databricks', 'spark'] | as_bool() }}"
-        # default:
-        #   enabled: "{{ target.type in ['redshift', 'postgres'] | as_bool() }}"
         snowflake:
-          enabled: "{{ target.type == 'snowflake' | as_bool() }}"
+          enabled: true
     user_mapping:
       +schema: "derived"
       +tags: "snowplow_web_incremental"
