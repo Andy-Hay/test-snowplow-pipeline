@@ -9,7 +9,7 @@ web:
       database: "{{ env_var('SNOWFLAKE_DATAMODELING_DATABASE') }}"
       warehouse: "{{ env_var('SNOWFLAKE_DATAMODELING_WAREHOUSE') }}"
       schema: "{{ env_var('SNOWFLAKE_DATAMODELING_SCHEMA') }}"
-      # threads: {{env_var('DATAMODELING_THREADS')}}
-      threads: 1
+      threads: {{ env_var('DATAMODELING_THREADS') }}
+      # threads: 1
       client_session_keep_alive: true
   target: prod
